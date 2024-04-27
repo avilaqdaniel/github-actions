@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
-        run: echo "Hola, corazona...!!!"
+        run: |
+            echo "Hola, corazona...!!!"
+            echo "Ahora puedo escribir en varias lineas"
       - name: Print goodbye
         run: echo "Chau, corazona...!!!"
