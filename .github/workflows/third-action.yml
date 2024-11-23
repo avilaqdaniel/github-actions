@@ -1,0 +1,16 @@
+name: Open Issue Workflow
+on:
+  issues: 
+    types: [opened]
+jobs:
+  Checkout-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update Python
+        uses: actions/setup-pythonv4
+        with:
+          python-version: "3.13"
+      - name: Run script
+        run: python src/main.py
